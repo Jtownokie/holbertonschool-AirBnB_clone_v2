@@ -11,7 +11,8 @@ app = Flask(__name__)
 @app.route('/states_list', strict_slashes=False)
 def states_list():
     """ Simple Hbnb Function """
-    return render_template('7-states_list.html', state_table=storage.all(State))
+    return render_template('7-states_list.html',
+                           state_table=storage.all(State))
 
 
 @app.teardown_appcontext
